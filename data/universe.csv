@@ -1,17 +1,37 @@
-isin,name,ticker,asset_class,category,ter,aum_m,benchmark,currency,esg_score,region,sector,vehicle,liquidity_score,qualitative_score,diversification_score
-IE00B4L5Y983,iShares Core MSCI World,SWDA.L,Equity,Global Equity,0.0020,78000,MSCI World,USD,76,Global,Diversified,ETF,95,82,88
-IE00B3XXRP09,Vanguard S&P 500,VUSA.L,Equity,US Equity,0.0007,42000,S&P 500,USD,72,United States,Diversified,ETF,96,80,70
-IE00B53QG562,iShares Nasdaq 100,CNDX.L,Equity,US Growth,0.0033,15000,Nasdaq 100,USD,66,United States,Technology,ETF,92,78,55
-IE00BKM4GZ66,iShares MSCI EM,EMIM.L,Equity,Emerging Markets,0.0018,21000,MSCI EM,USD,70,Emerging Markets,Diversified,ETF,90,77,84
-IE00B4K48X80,iShares Euro Corp Bond,IEAC.L,Bonds,EUR Corporate,0.0020,10000,Bloomberg Euro Corp,EUR,74,Europe,Fixed Income,ETF,91,83,86
-IE00B1FZSC47,iShares Global Govt Bond,IGLO.L,Bonds,Global Government,0.0020,3000,FTSE World Govt,USD,68,Global,Fixed Income,ETF,87,81,90
-DE000A0F5UH1,iShares STOXX Europe 600,EXSA.DE,Equity,Europe Equity,0.0020,8500,STOXX Europe 600,EUR,78,Europe,Diversified,ETF,90,81,78
-IE00B1XNHC34,iShares Global Clean Energy,INRG.L,Equity,Thematic,0.0065,2800,S&P Global Clean Energy,USD,84,Global,Clean Energy,ETF,82,72,60
-IE00B6YX5D40,SPDR MSCI World Small Cap,WDSC.L,Equity,Global Small Cap,0.0045,1200,MSCI World Small Cap,USD,71,Global,Small Cap,ETF,78,76,89
-IE00B8GKDB10,Vanguard FTSE All-World High Dividend,VHYL.L,Equity,Global Dividend,0.0029,5200,FTSE All-World High Dividend,USD,75,Global,Dividend,ETF,86,79,82
-IE00B4WXJJ64,iShares Core EUR Govt Bond,IEGA.L,Bonds,EUR Government,0.0009,6000,ICE Euro Govt,EUR,73,Europe,Fixed Income,ETF,89,82,88
-IE00B66F4759,iShares Global High Yield Corp Bond,GHYS.L,Bonds,Global High Yield,0.0050,1500,Markit iBoxx Global HY,USD,64,Global,Fixed Income,ETF,77,71,74
-IE00B579F325,iShares Physical Gold ETC,SGLN.L,Alternative,Gold,0.0012,18000,Gold Spot,USD,55,Global,Commodities,ETC,94,80,95
-ALTPE0000001,European Mid-Market PE Fund,PRIVATE_EQUITY,Alternative,Private Equity,0.0200,850,Private Markets,EUR,82,Europe,Private Equity,Private Equity,20,88,93
-ALTSCPI00001,European Diversified SCPI,SCPI_DEMO,Real Estate,SCPI,0.0120,3200,Real Estate,EUR,79,Europe,Real Estate,SCPI,35,84,87
-ALTSTRUCT001,Autocall Euro Stoxx 50 Demo,STRUCT_DEMO,Alternative,Structured Product,0.0100,250,Euro Stoxx 50,EUR,60,Europe,Structured,Structured Product,55,74,68
+isin,name,ticker,asset_class,category,ter,aum_m,benchmark,currency,esg_score,region,sector,vehicle,liquidity_score,qualitative_score,diversification_score,rating,duration,irr,tvpi,dpi,vintage,strategy,distribution_rate,occupancy_rate,coupon,barrier,autocall,underlying
+IE00B3XXRP09,Vanguard S&P 500,VUSA.L,Equity,US Equity,0.0007,42000,S&P 500,USD,72,United States,Diversified,ETF,96,80,70,,,,,,,,,,,,,
+IE00B5BMR087,iShares Core S&P 500,CSPX.L,Equity,US Equity,0.0007,68000,S&P 500,USD,71,United States,Diversified,ETF,97,81,70,,,,,,,,,,,,,
+IE00B6YX5C33,SPDR S&P 500,SPY5.L,Equity,US Equity,0.0003,25000,S&P 500,USD,70,United States,Diversified,ETF,93,79,70,,,,,,,,,,,,,
+IE00B53QG562,iShares Nasdaq 100,CNDX.L,Equity,US Growth,0.0033,15000,Nasdaq 100,USD,66,United States,Technology,ETF,92,78,55,,,,,,,,,,,,,
+IE0032077012,Invesco EQQQ Nasdaq-100,EQQQ.L,Equity,US Growth,0.003,9000,Nasdaq 100,USD,65,United States,Technology,ETF,88,76,54,,,,,,,,,,,,,
+IE00B4L5Y983,iShares Core MSCI World,SWDA.L,Equity,Global Equity,0.002,78000,MSCI World,USD,76,Global,Diversified,ETF,95,82,88,,,,,,,,,,,,,
+LU1681043599,Amundi MSCI World,CW8.PA,Equity,Global Equity,0.0038,11000,MSCI World,USD,74,Global,Diversified,ETF,85,79,87,,,,,,,,,,,,,
+DE000A0F5UH1,iShares STOXX Europe 600,EXSA.DE,Equity,Europe Equity,0.002,8500,STOXX Europe 600,EUR,78,Europe,Diversified,ETF,90,81,78,,,,,,,,,,,,,
+FR0007052782,Amundi CAC 40,CAC.PA,Equity,Europe Equity,0.0025,4500,CAC 40,EUR,69,Europe,Diversified,ETF,84,74,55,,,,,,,,,,,,,
+LU0380865021,Xtrackers EURO STOXX 50,XESC.DE,Equity,Europe Equity,0.0009,6200,EURO STOXX 50,EUR,72,Europe,Diversified,ETF,87,77,58,,,,,,,,,,,,,
+IE00BKM4GZ66,iShares MSCI EM,EMIM.L,Equity,Emerging Markets,0.0018,21000,MSCI EM,USD,70,Emerging Markets,Diversified,ETF,90,77,84,,,,,,,,,,,,,
+LU1681045370,Amundi MSCI Emerging Markets,AEEM.PA,Equity,Emerging Markets,0.002,3800,MSCI EM,USD,68,Emerging Markets,Diversified,ETF,82,74,83,,,,,,,,,,,,,
+IE00B6YX5D40,SPDR MSCI World Small Cap,WDSC.L,Equity,Global Small Cap,0.0045,1200,MSCI World Small Cap,USD,71,Global,Small Cap,ETF,78,76,89,,,,,,,,,,,,,
+IE00B8GKDB10,Vanguard FTSE All-World High Dividend,VHYL.L,Equity,Global Dividend,0.0029,5200,FTSE All-World High Dividend,USD,75,Global,Dividend,ETF,86,79,82,,,,,,,,,,,,,
+IE00B1XNHC34,iShares Global Clean Energy,INRG.L,Equity,Thematic,0.0065,2800,S&P Global Clean Energy,USD,84,Global,Clean Energy,ETF,82,72,60,,,,,,,,,,,,,
+IE00B4L5YX21,iShares MSCI Japan,IJPA.L,Equity,Japan Equity,0.0048,3100,MSCI Japan,JPY,73,Japan,Diversified,ETF,80,75,72,,,,,,,,,,,,,
+IE00B4K48X80,iShares Euro Corp Bond,IEAC.L,Bonds,EUR Corporate,0.002,10000,Bloomberg Euro Corp,EUR,74,Europe,Fixed Income,ETF,91,83,86,A,4.6,,,,,,,,,,,
+FR0013346464,Amundi Euro Corporate Bond,CC4.PA,Bonds,EUR Corporate,0.0016,3200,Bloomberg Euro Corp,EUR,73,Europe,Fixed Income,ETF,83,80,85,A-,4.9,,,,,,,,,,,
+IE00B1FZSC47,iShares Global Govt Bond,IGLO.L,Bonds,Global Government,0.002,3000,FTSE World Govt,USD,68,Global,Fixed Income,ETF,87,81,90,AA,8.2,,,,,,,,,,,
+LU0290358497,Xtrackers Global Government Bond,XGGB.DE,Bonds,Global Government,0.0025,1900,FTSE World Govt,USD,67,Global,Fixed Income,ETF,79,78,89,AA-,8.5,,,,,,,,,,,
+IE00B4WXJJ64,iShares Core EUR Govt Bond,IEGA.L,Bonds,EUR Government,0.0009,6000,ICE Euro Govt,EUR,73,Europe,Fixed Income,ETF,89,82,88,AA,7.9,,,,,,,,,,,
+FR0013346472,Amundi Euro Government Bond,GOVE.PA,Bonds,EUR Government,0.0014,2100,ICE Euro Govt,EUR,72,Europe,Fixed Income,ETF,81,79,87,AA-,7.4,,,,,,,,,,,
+IE00B66F4759,iShares Global High Yield Corp Bond,GHYS.L,Bonds,Global High Yield,0.005,1500,Markit iBoxx Global HY,USD,64,Global,Fixed Income,ETF,77,71,74,BB,3.8,,,,,,,,,,,
+IE00B66F4667,iShares Euro High Yield,IHYG.L,Bonds,Global High Yield,0.005,4300,Markit iBoxx Euro HY,EUR,65,Europe,Fixed Income,ETF,80,73,75,BB,3.4,,,,,,,,,,,
+IE00B14X4M10,iShares $ Treasury Bond 1-3yr,IBTS.L,Bonds,US Short Government,0.0007,8800,ICE US Treasury 1-3Y,USD,60,United States,Fixed Income,ETF,90,80,65,AAA,1.9,,,,,,,,,,,
+IE00B579F325,iShares Physical Gold ETC,SGLN.L,Alternative,Gold,0.0012,18000,Gold Spot,USD,55,Global,Commodities,ETC,94,80,95,,,,,,,,,,,,,
+FR0013416716,Amundi Physical Gold,GLDA.PA,Alternative,Gold,0.0015,2600,Gold Spot,USD,54,Global,Commodities,ETC,85,78,94,,,,,,,,,,,,,
+ALTPE0000001,European Mid-Market PE Fund,PRIVATE_EQUITY,Alternative,Private Equity,0.02,850,Private Markets,EUR,82,Europe,Private Equity,Private Equity,20,88,93,,,0.142,1.58,0.62,2019,Buyout mid-market,,,,,,
+ALTPE0000002,European Growth Equity Fund,PE_GROWTH_EU,Alternative,Private Equity,0.022,420,Private Markets,EUR,79,Europe,Private Equity,Private Equity,15,84,88,,,0.168,1.32,0.21,2021,Growth equity,,,,,,
+ALTPE0000003,US Buyout Opportunities Fund,PE_BUYOUT_US,Alternative,Private Equity,0.025,1100,Private Markets,USD,71,United States,Private Equity,Private Equity,12,86,80,,,0.121,1.91,1.35,2016,Large buyout,,,,,,
+ALTSTRUCT001,Autocall Euro Stoxx 50 Demo,STRUCT_DEMO,Alternative,Structured Product,0.01,250,Euro Stoxx 50,EUR,60,Europe,Structured,Structured Product,55,74,68,,,,,,,,,,0.08,0.6,Oui,Euro Stoxx 50
+ALTSTRUCT002,Autocall S&P 500 Worst-of Demo,STRUCT_SP500_WO,Alternative,Structured Product,0.011,180,S&P 500 / Euro Stoxx 50,EUR,58,Global,Structured,Structured Product,48,70,55,,,,,,,,,,0.095,0.55,Oui,Worst-of S&P 500 / Euro Stoxx 50
+ALTSTRUCT003,Note à capital protégé CAC 40 Demo,STRUCT_CAC_CPN,Alternative,Structured Product,0.008,95,CAC 40,EUR,61,Europe,Structured,Structured Product,42,72,52,,,,,,,,,,0.045,1.0,Non,CAC 40
+ALTSCPI00001,European Diversified SCPI,SCPI_DEMO,Real Estate,SCPI,0.012,3200,Real Estate,EUR,79,Europe,Real Estate,SCPI,35,84,87,,,,,,,,0.045,0.93,,,,
+ALTSCPI00002,SCPI Bureaux Paris Ile-de-France,SCPI_BUREAUX,Real Estate,SCPI,0.0135,1800,Real Estate,EUR,75,Europe,Real Estate,SCPI,28,80,62,,,,,,,,0.041,0.9,,,,
+ALTSCPI00003,SCPI Diversifiée Europe,SCPI_DIVERSIFIEE,Real Estate,SCPI,0.011,950,Real Estate,EUR,81,Europe,Real Estate,SCPI,30,82,91,,,,,,,,0.048,0.95,,,,

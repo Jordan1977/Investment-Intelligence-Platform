@@ -20,8 +20,10 @@ def audit_portfolio(portfolio,universe,prices,alerts):
         r=m.loc[m.weight.idxmax()]; flags.append({'level':'warning','title':'Concentration ligne','text':f"{r['name']} représente {r['weight']:.0%} du portefeuille."})
     if by_asset.get('Equity',0)>alerts['high_equity_weight']: flags.append({'level':'warning','title':'Budget actions','text':f"La poche actions atteint {by_asset.get('Equity',0):.0%}."})
     if by_region.get('United States',0)>alerts['high_us_weight']: flags.append({'level':'warning','title':'Exposition États-Unis','text':f"L'exposition directe identifiée atteint {by_region.get('United States',0):.0%}."})
-    if by_sector and max(by_sector.values())>alerts['high_sector_weight']:
-        s=max(by_sector,key=by_sector.get); flags.append({'level':'info','title':'Concentration sectorielle','text':f"{s} représente {by_sector[s]:.0%} du portefeuille."})
+    GENERIC_SECTOR_LABELS={'Diversified','Fixed Income','Real Estate','Private Equity','Structured','Cash'}
+    real_sectors={k:v for k,v in by_sector.items() if k not in GENERIC_SECTOR_LABELS}
+    if real_sectors and max(real_sectors.values())>alerts['high_sector_weight']:
+        s=max(real_sectors,key=real_sectors.get); flags.append({'level':'info','title':'Concentration sectorielle','text':f"{s} représente {real_sectors[s]:.0%} du portefeuille (hors expositions diversifiées)."})
     if weighted_ter>alerts['high_weighted_ter']: flags.append({'level':'warning','title':'Coût du portefeuille','text':f"TER pondéré estimé : {weighted_ter:.2%}."})
     high=[]
     for i in range(len(corr.columns)):

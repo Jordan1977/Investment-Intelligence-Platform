@@ -5,7 +5,9 @@ def normalize_columns(df):
     return df.rename(columns={c:ALIASES.get(str(c).strip().lower(),str(c).strip().lower().replace(' ','_')) for c in df.columns})
 def load_universe(path):
     df=normalize_columns(pd.read_csv(path))
-    for c in ['ter','aum_m','esg_score','liquidity_score','qualitative_score','diversification_score']:
+    numeric_cols=['ter','aum_m','esg_score','liquidity_score','qualitative_score','diversification_score',
+                  'duration','irr','tvpi','dpi','vintage','distribution_rate','occupancy_rate','coupon','barrier']
+    for c in numeric_cols:
         if c in df: df[c]=pd.to_numeric(df[c],errors='coerce')
     return df
 def load_portfolio(path):

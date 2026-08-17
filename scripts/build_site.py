@@ -8,6 +8,12 @@ from src.scoring import apply_eligibility,score_group,explain_score
 from src.portfolio import audit_portfolio
 from src.advisory import allocation_gap,candidate_supports
 from src.market_intelligence import build_market_monitor
+from src.stress_testing import run_stress_tests
+from src.overlap import build_overlap_matrix
+from src.suitability import suitability_assessment
+from src.investment_committee import build_committee_book
+from src.structured_lab import structured_scenarios
+from src.private_markets import private_market_snapshot
 
 def safe(v):
     if v is None:return None
@@ -43,6 +49,25 @@ def main():
             if g['gap']>.01: cand[g['asset_class']]=candidate_supports(scored,g['asset_class'])
         advisory[key]={'label':p['label'],'risk_budget':p['risk_budget'],'gaps':gaps,'candidates':cand}
     market=build_market_monitor(prices,marketcfg['benchmarks'])
-    payload={'meta':{'generated_at':pd.Timestamp.now(tz='UTC').isoformat(),'mode':mode,'universe_count':int(len(scored)),'eligible_count':int(scored.eligible.sum())},'universe':[{k:safe(v) for k,v in r.items()} for r in scored.to_dict('records')],'deepdive':deep,'portfolio':{'holdings':portfolio.to_dict('records'),'audit':audit},'advisory':advisory,'market':market}
+    stress=run_stress_tests(portfolio,universe)
+    overlap=build_overlap_matrix(portfolio,universe,audit.get('correlation',{}))
+    suitability={}
+    for key,p in profiles['client_profiles'].items():
+        suitability[key]=suitability_assessment(audit,current,p)
+    committee=build_committee_book(scored)
+    structured={}
+    for _,r in universe[universe['vehicle']=='Structured Product'].iterrows():
+        structured[r['ticker']]=structured_scenarios(r.to_dict())
+    private_markets=private_market_snapshot(universe)
+    data_quality={
+        'universe_rows':int(len(universe)),
+        'missing_ticker':int(universe['ticker'].isna().sum()),
+        'missing_isin':int(universe['isin'].isna().sum()),
+        'missing_aum':int(universe['aum_m'].isna().sum()),
+        'missing_ter':int(universe['ter'].isna().sum()),
+        'duplicate_tickers':int(universe['ticker'].duplicated().sum()),
+        'completeness':float(1-universe[['name','ticker','asset_class','vehicle','ter','aum_m']].isna().mean().mean())
+    }
+    payload={'meta':{'generated_at':pd.Timestamp.now(tz='UTC').isoformat(),'mode':mode,'universe_count':int(len(scored)),'eligible_count':int(scored.eligible.sum()),'version':'V10 Interview Edition'},'universe':[{k:safe(v) for k,v in r.items()} for r in scored.to_dict('records')],'deepdive':deep,'portfolio':{'holdings':portfolio.to_dict('records'),'audit':audit,'stress':stress,'overlap':overlap},'advisory':advisory,'suitability':suitability,'committee':committee,'structured_lab':structured,'private_markets':private_markets,'data_quality':data_quality,'market':market}
     out=ROOT/'docs/data/dashboard.json'; out.write_text(json.dumps(payload,ensure_ascii=False,allow_nan=False,indent=2),encoding='utf-8'); print(f'Built {mode} dashboard with {len(scored)} instruments')
 if __name__=='__main__':main()
