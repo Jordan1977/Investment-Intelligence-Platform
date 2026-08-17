@@ -1,0 +1,9 @@
+name,ticker,weight
+iShares Core MSCI World,SWDA.L,0.28
+Vanguard S&P 500,VUSA.L,0.14
+iShares Euro Corp Bond,IEAC.L,0.17
+iShares Global Govt Bond,IGLO.L,0.08
+iShares STOXX Europe 600,EXSA.DE,0.10
+European Diversified SCPI,SCPI_DEMO,0.08
+European Mid-Market PE Fund,PRIVATE_EQUITY,0.05
+Cash,CASH,0.10

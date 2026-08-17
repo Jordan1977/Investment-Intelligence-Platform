@@ -1,0 +1,21 @@
+eligibility:
+  min_history_days: 504
+  min_aum_m: 50
+  max_ter:
+    Equity: 0.025
+    Bonds: 0.020
+    Alternative: 0.030
+    Real Estate: 0.030
+    default: 0.030
+weights:
+  Equity: {perf_3y: 0.12, perf_1y: 0.08, sharpe: 0.15, sortino: 0.12, max_drawdown: 0.13, volatility: 0.08, consistency: 0.10, cost: 0.08, aum: 0.06, esg: 0.08}
+  Bonds: {perf_3y: 0.10, perf_1y: 0.05, sharpe: 0.13, sortino: 0.10, max_drawdown: 0.15, volatility: 0.12, consistency: 0.10, cost: 0.08, aum: 0.08, esg: 0.09}
+  Alternative: {qualitative: 0.35, cost: 0.15, liquidity: 0.20, esg: 0.15, diversification: 0.15}
+  Real Estate: {qualitative: 0.35, cost: 0.15, liquidity: 0.15, esg: 0.15, diversification: 0.20}
+alerts:
+  max_single_position_weight: 0.25
+  high_equity_weight: 0.80
+  high_us_weight: 0.60
+  high_sector_weight: 0.35
+  high_pair_correlation: 0.88
+  high_weighted_ter: 0.0125

@@ -1,0 +1,10 @@
+benchmarks:
+  World Equity: SWDA.L
+  US Equity: VUSA.L
+  Europe Equity: EXSA.DE
+  Emerging Equity: EMIM.L
+  Technology: CNDX.L
+  Euro Corporate Bonds: IEAC.L
+  Global Government Bonds: IGLO.L
+  Gold: SGLN.L
+  Clean Energy: INRG.L

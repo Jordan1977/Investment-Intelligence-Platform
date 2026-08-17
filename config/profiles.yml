@@ -1,0 +1,13 @@
+client_profiles:
+  prudent:
+    label: Prudent
+    risk_budget: 0.08
+    target: {Equity: 0.25, Bonds: 0.45, Real Estate: 0.10, Alternative: 0.05, Cash: 0.15}
+  balanced:
+    label: Équilibré
+    risk_budget: 0.13
+    target: {Equity: 0.50, Bonds: 0.25, Real Estate: 0.10, Alternative: 0.05, Cash: 0.10}
+  dynamic:
+    label: Dynamique
+    risk_budget: 0.19
+    target: {Equity: 0.70, Bonds: 0.12, Real Estate: 0.08, Alternative: 0.05, Cash: 0.05}
