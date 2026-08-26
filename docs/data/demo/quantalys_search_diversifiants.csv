@@ -1,0 +1,6 @@
+isin,name,ticker,vehicle,asset_class,category,benchmark,region,sector,perf_1y,perf_3y,volatility,sharpe,sortino,max_drawdown,ter,aum_m,qualitative_score,diversification_score,liquidity_score,rating,duration,tracking_error,tracking_difference,irr,tvpi,dpi,vintage,distribution_rate,occupancy_rate,coupon,barrier,autocall
+FR0013269917,Silver Trust Physical ETC,ETLS.PA,ETC,Alternative,Precious Metals,Silver Spot,Global,Commodities,0.121,0.052,0.231,0.38,0.55,-0.281,0.0049,420,68,74,71,,,0.0028,-0.006,,,,,,,,,
+FR0014008ZR3,Buyout Growth Europe III,,Private Equity,Alternative,Private Equity - Buyout,N/A (fonds fermé),Europe,Diversified,,,,,,,0.021,,85,64,10,,,,,0.128,1.68,0.51,2020,,,,,
+FR0013512999,SCPI Bureaux Île-de-France,,SCPI,Real Estate,SCPI Bureaux,N/A,France,Office Real Estate,,,,,,,0.0105,,71,42,25,,,,,,,,,0.041,0.89,,,
+FR0013620004,Autocall Eurostoxx Banks Demo,,Structured Product,Alternative,Produit structuré,Eurostoxx Banks,Europe,Financials,,,,,,,0.009,,63,48,18,,,,,,,,,,,0.11,0.5,Oui
+LU1900066033,Amundi Physical Platinum ETC,PLTP.PA,ETC,Alternative,Precious Metals,Platinum Spot,Global,Commodities,0.064,0.018,0.198,0.21,0.31,-0.245,0.0055,180,61,69,54,,,0.0031,-0.007,,,,,,,,,

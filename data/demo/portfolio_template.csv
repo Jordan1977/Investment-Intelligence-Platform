@@ -1,0 +1,4 @@
+name,isin,ticker,type,amount,envelope,asset_class,region,sector,ter
+ETF MSCI World,IE00B4L5Y983,SWDA.L,ETF,45000,PEA,Equity,Global,Diversified,0.0020
+ETF Nasdaq 100,IE00B53QG562,CNDX.L,ETF,22000,PEA,Equity,United States,Technology,0.0033
+Fonds Europe,DE000A0F5UH1,EXSA.DE,ETF,18000,Assurance-vie,Equity,Europe,Diversified,0.0020

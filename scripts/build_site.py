@@ -68,6 +68,11 @@ def main():
         'duplicate_tickers':int(universe['ticker'].duplicated().sum()),
         'completeness':float(1-universe[['name','ticker','asset_class','vehicle','ter','aum_m']].isna().mean().mean())
     }
-    payload={'meta':{'generated_at':pd.Timestamp.now(tz='UTC').isoformat(),'mode':mode,'universe_count':int(len(scored)),'eligible_count':int(scored.eligible.sum()),'version':'V10 Interview Edition'},'universe':[{k:safe(v) for k,v in r.items()} for r in scored.to_dict('records')],'deepdive':deep,'portfolio':{'holdings':portfolio.to_dict('records'),'audit':audit,'stress':stress,'overlap':overlap},'advisory':advisory,'suitability':suitability,'committee':committee,'structured_lab':structured,'private_markets':private_markets,'data_quality':data_quality,'market':market}
-    out=ROOT/'docs/data/dashboard.json'; out.write_text(json.dumps(payload,ensure_ascii=False,allow_nan=False,indent=2),encoding='utf-8'); print(f'Built {mode} dashboard with {len(scored)} instruments')
+    payload={'meta':{'generated_at':pd.Timestamp.now(tz='UTC').isoformat(),'mode':mode,'universe_count':int(len(scored)),'eligible_count':int(scored.eligible.sum()),'version':'V11 Advisory Workflow'},'universe':[{k:safe(v) for k,v in r.items()} for r in scored.to_dict('records')],'deepdive':deep,'portfolio':{'holdings':portfolio.to_dict('records'),'audit':audit,'stress':stress,'overlap':overlap},'advisory':advisory,'suitability':suitability,'committee':committee,'structured_lab':structured,'private_markets':private_markets,'data_quality':data_quality,'market':market}
+    out=ROOT/'docs/data/dashboard.json'; out.write_text(json.dumps(payload,ensure_ascii=False,allow_nan=False,indent=2),encoding='utf-8')
+    import shutil
+    demo_src=ROOT/'data/demo'; demo_dst=ROOT/'docs/data/demo'
+    if demo_src.exists():
+        shutil.rmtree(demo_dst, ignore_errors=True); shutil.copytree(demo_src, demo_dst)
+    print(f'Built {mode} dashboard with {len(scored)} instruments')
 if __name__=='__main__':main()

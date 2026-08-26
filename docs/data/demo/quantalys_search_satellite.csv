@@ -1,0 +1,6 @@
+isin,name,ticker,vehicle,asset_class,category,benchmark,region,sector,perf_1y,perf_3y,volatility,sharpe,sortino,max_drawdown,ter,aum_m,qualitative_score,diversification_score,liquidity_score,rating,duration,tracking_error,tracking_difference,irr,tvpi,dpi,vintage,distribution_rate,occupancy_rate,coupon,barrier,autocall
+IE00BKM4GZ66,iShares MSCI India ETF,INDI.L,ETF,Equity,India Equity,MSCI India,Asia,Diversified,0.146,0.112,0.187,0.61,0.89,-0.221,0.0065,2600,76,58,70,,,0.0021,-0.004,,,,,,,,,
+LU0592215403,Amundi MSCI Japan ETF,CJPX.PA,ETF,Equity,Japan Equity,MSCI Japan,Asia,Diversified,0.089,0.071,0.152,0.48,0.68,-0.178,0.0012,980,74,62,68,,,0.0009,-0.0018,,,,,,,,,
+FR0013346681,Green Bond Impact Fund,GBIF,OPCVM,Bonds,EUR Green Bond,Bloomberg MSCI Euro Green Bond,Europe,Fixed Income,0.041,0.028,0.052,0.52,0.74,-0.061,0.0085,640,83,64,62,A,4.6,,,,,,,,,,,
+LU2110109535,Xtrackers MSCI Emerging Markets ESG,XZEM.DE,ETF,Equity,Emerging Markets Equity,MSCI EM ESG Leaders,Emerging,Diversified,0.078,0.041,0.176,0.34,0.49,-0.245,0.0018,1450,77,66,73,,,0.0016,-0.003,,,,,,,,,
+FR0013412627,Infrastructure Debt Opportunities,IDOF,OPCVM,Alternative,Infrastructure Debt,N/A (fonds fermé),Europe,Infrastructure,,,,,,,0.0135,310,80,70,22,,,,,0.062,1.21,0.38,2021,,,,,

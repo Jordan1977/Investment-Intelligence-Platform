@@ -1,0 +1,12 @@
+{
+  "name": "investment-intelligence-platform-frontend-tests",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Tests fonctionnels du parcours interactif (docs/index.html) — exécutés en DOM simulé (jsdom).",
+  "scripts": {
+    "test": "node tests/test_frontend.js"
+  },
+  "devDependencies": {
+    "jsdom": "^24.0.0"
+  }
+}
